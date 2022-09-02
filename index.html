@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethers</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./ethers.js"  type="module" defer></script>
+    <script src="./app.js"  type="module" defer></script>
+</head>
+<body>
+    
+
+    
+    <div class="gird place-items-center h-screen max-w-3xl m-auto p-4 mt-10">    
+        <h1 class="text-center text-2xl m-2 ">
+            
+        Ethers-metamask Dapp
+        <button id="connectBtn" class="border m-2 p-2 border-red-300">Connect Wallet</button>
+        <span id="userAddress"> </span>
+        </h1>
+
+        <p id="loader"></p>
+        <p id="errored"></p>
+
+        <div class="tab flex">
+                <button class="tablinks active w-full" onclick="openCity(event, 'London')">Tokens</button>
+                <button class="tablinks w-full" onclick="openCity(event, 'Paris')">Send Token</button>
+          </div>
+          
+          <!-- Tab content -->
+          <div id="London" class="tabcontent block">
+           <div id="token"></div>
+            
+         
+          </div>
+          
+          <div id="Paris" class="tabcontent">
+            <div class="max-w-xs mx-auto">
+     
+            <div class="my-3">
+              <label class="mr-3">Amount: </label>
+              <input id="amt" name="amt" class="border border-blue-300 px-6 py-1" />
+            </div>
+            <div class="my-3">
+              <label class="mr-3">Receiver: </label>
+              <input id="receiver" name="amt" class="border border-blue-300 px-6 py-1" />
+            </div>
+            <button  id="sendTransaction" class="border border-blue-300 px-4 py-2 w-full mt-3">Send</button>
+          </div>
+        </div>
+    </div>
+
+      
+</body>
+</html>
